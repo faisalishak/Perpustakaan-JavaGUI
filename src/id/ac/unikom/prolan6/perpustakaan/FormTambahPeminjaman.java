@@ -519,8 +519,8 @@ public class FormTambahPeminjaman extends javax.swing.JDialog {
 
     private void simpan() {
         
-       tglPinjam = tglPjm.getCalendar();
-       tglKbl = tglPjm.getCalendar();
+//       tglPinjam = tglPjm.getCalendar();
+//       tglKbl = tglPjm.getCalendar();
         
         // proses insert
         

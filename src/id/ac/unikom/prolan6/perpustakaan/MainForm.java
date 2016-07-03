@@ -19,10 +19,10 @@ public class MainForm extends javax.swing.JFrame {
      * Creates new form MainForm
      */
     Pegawai pegawai;
-    
+
     public MainForm() {
         initComponents();
-        
+
     }
 
     /**
@@ -68,11 +68,10 @@ public class MainForm extends javax.swing.JFrame {
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/id/ac/unikom/prolan6/perpustakaan/resource/p.png"))); // NOI18N
 
-        labelDisplayName.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
+        labelDisplayName.setFont(new java.awt.Font("Arial", 0, 15)); // NOI18N
         labelDisplayName.setForeground(new java.awt.Color(255, 255, 255));
-        labelDisplayName.setText("Nama User");
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 30)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 25)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("PERPUSTAKAAN");
 
@@ -83,29 +82,24 @@ public class MainForm extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 266, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 427, Short.MAX_VALUE)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(labelDisplayName)
                 .addGap(48, 48, 48))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 81, Short.MAX_VALUE)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(19, 19, 19)
-                                .addComponent(jLabel3))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(24, 24, 24)
-                                .addComponent(labelDisplayName)))
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
+                        .addGap(23, 23, 23)
+                        .addComponent(jLabel3))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(30, 30, 30)
+                        .addComponent(labelDisplayName)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jMenu1.setText("File");
@@ -187,7 +181,7 @@ public class MainForm extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 344, Short.MAX_VALUE))
         );
 
@@ -201,12 +195,21 @@ public class MainForm extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem5ActionPerformed
 
     private void menuLoginMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_menuLoginMouseClicked
-        FormLogin fl = new FormLogin(this, true);
-        fl.setLocationRelativeTo(null);
-        fl.setVisible(true);
-        
-        pegawai = fl.getPegawai();
-        labelDisplayName.setText(pegawai.getNamaPegawai());
+        if (menuLogin.getText() != "Logout") {
+            FormLogin fl = new FormLogin(this, true);
+            fl.setLocationRelativeTo(null);
+            fl.setVisible(true);
+
+            pegawai = fl.getPegawai();
+            if (pegawai != null) {
+                labelDisplayName.setText(pegawai.getNamaPegawai());
+                menuLogin.setText("Logout");
+            } 
+        }else{
+            menuLogin.setText("Login");
+            Pegawai pegawai = new Pegawai();
+            labelDisplayName.setText(pegawai.getNamaPegawai());
+        }
     }//GEN-LAST:event_menuLoginMouseClicked
 
     /**
