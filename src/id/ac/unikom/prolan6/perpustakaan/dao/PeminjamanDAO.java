@@ -10,6 +10,7 @@ import java.util.Calendar;
 public interface PeminjamanDAO {
   
     ArrayList<Peminjaman> getPeminjaman();
+    ArrayList<Peminjaman> getPeminjaman(String nama);
     boolean pinjam(int idAnggota, Calendar tglPinjam, Calendar tglKembali, int harga);
     
     // proses pengembalian

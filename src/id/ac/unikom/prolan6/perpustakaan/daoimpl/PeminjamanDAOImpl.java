@@ -22,10 +22,22 @@ public class PeminjamanDAOImpl implements PeminjamanDAO {
     }
 
     @Override
-    public ArrayList<Peminjaman> getPeminjaman() {
-
+    public ArrayList<Peminjaman> getPeminjaman(String nama) {
+        boolean isSearching = nama != null && !nama.isEmpty();
+        String SELECT;
         ArrayList<Peminjaman> arrayPeminjaman = null;
-        String SELECT = "SELECT "
+        if(isSearching){
+         SELECT = "SELECT "
+                + "peminjaman.idPeminjaman, "
+                + "peminjaman.tglPinjam, "
+                + "peminjaman.tglKembali, "
+                + "peminjaman.harga, "
+                + "anggota.namaAnggota "
+                + "FROM peminjaman, anggota "
+                + "WHERE "
+                + "anggota.namaAnggota LIKE ? and peminjaman.idAnggota = anggota.idAnggota ";
+        }else{
+            SELECT = "SELECT "
                 + "peminjaman.idPeminjaman, "
                 + "peminjaman.tglPinjam, "
                 + "peminjaman.tglKembali, "
@@ -34,15 +46,18 @@ public class PeminjamanDAOImpl implements PeminjamanDAO {
                 + "FROM peminjaman, anggota "
                 + "WHERE "
                 + "peminjaman.idAnggota = anggota.idAnggota ORDER BY peminjaman.tglPinjam DESC";
+        }
         PreparedStatement state = null;
 
         try {
             state = conn.prepareStatement(SELECT);
-
+            if (isSearching) {
+                    state.setString(1, nama + "%");
+                }
             ResultSet result = state.executeQuery();
             if (result != null) {
                 arrayPeminjaman = new ArrayList<>();
-
+                
                 while (result.next()) {
                     Peminjaman p = new Peminjaman();
                     p.setIdPinjam(result.getInt(1));
@@ -155,6 +170,11 @@ public class PeminjamanDAOImpl implements PeminjamanDAO {
             Logger.getLogger(PeminjamanDAOImpl.class.getName()).log(Level.SEVERE, null, ex);
         }
         return idPinjam;
+    }
+
+    @Override
+    public ArrayList<Peminjaman> getPeminjaman() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
 }

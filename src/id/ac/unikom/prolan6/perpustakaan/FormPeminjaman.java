@@ -10,6 +10,7 @@ import id.ac.unikom.prolan6.perpustakaan.daoimpl.PeminjamanDAOImpl;
 import id.ac.unikom.prolan6.perpustakaan.enitiy.Peminjaman;
 import id.ac.unikom.prolan6.perpustakaan.tablemodel.PeminjamanTM;
 import java.util.ArrayList;
+import javax.swing.JOptionPane;
 
 
 public class FormPeminjaman extends javax.swing.JFrame {
@@ -19,12 +20,12 @@ public class FormPeminjaman extends javax.swing.JFrame {
      */
     public FormPeminjaman() {
         initComponents();
-        getData();
+        getData(null);
     }
     
-    private void getData() {
+    private void getData(String nama) {
         PeminjamanDAO dao = new PeminjamanDAOImpl();
-        arrayPeminjaman = dao.getPeminjaman();
+        arrayPeminjaman = dao.getPeminjaman(nama);
         
         PeminjamanTM tm = new PeminjamanTM();
         tm.setArrayPeminjaman(arrayPeminjaman);
@@ -79,7 +80,18 @@ public class FormPeminjaman extends javax.swing.JFrame {
 
         jLabel2.setText("Cari Nama");
 
+        fieldCari.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                fieldCariKeyPressed(evt);
+            }
+        });
+
         buttonCari.setText("Cari");
+        buttonCari.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonCariActionPerformed(evt);
+            }
+        });
 
         buttonPinjam.setText("Tambah Peminjam");
         buttonPinjam.addActionListener(new java.awt.event.ActionListener() {
@@ -189,13 +201,13 @@ public class FormPeminjaman extends javax.swing.JFrame {
         FormTambahPeminjaman fp = new FormTambahPeminjaman(this, true);
         fp.setLocationRelativeTo(null);
         fp.setVisible(true);
-        getData();
+        getData(null);
         
     }//GEN-LAST:event_buttonPinjamActionPerformed
 
     private void buttonRefreshActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonRefreshActionPerformed
 
-        getData();
+        getData(null);
         
     }//GEN-LAST:event_buttonRefreshActionPerformed
 
@@ -215,7 +227,7 @@ public class FormPeminjaman extends javax.swing.JFrame {
             fud.setLocationRelativeTo(null);
             fud.setVisible(true);
             
-            getData();
+            getData(null);
                     
         } else {
             // pesan harus memilih
@@ -234,12 +246,26 @@ public class FormPeminjaman extends javax.swing.JFrame {
             fud.setLocationRelativeTo(null);
             fud.setVisible(true);
             
-            getData();
+            getData(null);
                     
         } else {
             // pesan harus memilih
         }
     }//GEN-LAST:event_tablePeminjamanMouseClicked
+
+    private void buttonCariActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonCariActionPerformed
+        String nama = fieldCari.getText();
+        if(!nama.isEmpty() && nama != null){
+            getData(nama);
+        }else{
+            JOptionPane.showMessageDialog(this, "Isi Form Terlebih Dulu  !");
+        }
+    }//GEN-LAST:event_buttonCariActionPerformed
+
+    private void fieldCariKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_fieldCariKeyPressed
+        String nama = fieldCari.getText();
+        getData(nama);
+    }//GEN-LAST:event_fieldCariKeyPressed
 
     /**
      * @param args the command line arguments
