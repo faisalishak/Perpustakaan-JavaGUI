@@ -3,8 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package id.ac.unikom.prolan6.perpustakaan;
+
+import id.ac.unikom.prolan6.perpustakaan.dao.PegawaiDAO;
+import id.ac.unikom.prolan6.perpustakaan.daoimpl.PegawaiDAOImpl;
+import id.ac.unikom.prolan6.perpustakaan.enitiy.Pegawai;
 
 /**
  *
@@ -15,8 +18,11 @@ public class MainForm extends javax.swing.JFrame {
     /**
      * Creates new form MainForm
      */
+    Pegawai pegawai;
+    
     public MainForm() {
         initComponents();
+        
     }
 
     /**
@@ -31,7 +37,7 @@ public class MainForm extends javax.swing.JFrame {
         jMenu6 = new javax.swing.JMenu();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        labelDisplayName = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
@@ -49,7 +55,7 @@ public class MainForm extends javax.swing.JFrame {
         jMenuItem9 = new javax.swing.JMenuItem();
         jMenuItem10 = new javax.swing.JMenuItem();
         jMenu5 = new javax.swing.JMenu();
-        jMenu7 = new javax.swing.JMenu();
+        menuLogin = new javax.swing.JMenu();
 
         jMenu6.setText("jMenu6");
 
@@ -62,11 +68,11 @@ public class MainForm extends javax.swing.JFrame {
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/id/ac/unikom/prolan6/perpustakaan/resource/p.png"))); // NOI18N
 
-        jLabel2.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("Nama User");
+        labelDisplayName.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
+        labelDisplayName.setForeground(new java.awt.Color(255, 255, 255));
+        labelDisplayName.setText("Nama User");
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 30)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("PERPUSTAKAAN");
 
@@ -77,11 +83,11 @@ public class MainForm extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 248, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 266, Short.MAX_VALUE)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel2)
-                .addGap(29, 29, 29))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(labelDisplayName)
+                .addGap(48, 48, 48))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -97,7 +103,7 @@ public class MainForm extends javax.swing.JFrame {
                                 .addComponent(jLabel3))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(24, 24, 24)
-                                .addComponent(jLabel2)))
+                                .addComponent(labelDisplayName)))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
@@ -162,8 +168,13 @@ public class MainForm extends javax.swing.JFrame {
         jMenu5.setText("Database");
         jMenuBar1.add(jMenu5);
 
-        jMenu7.setText("Logout");
-        jMenuBar1.add(jMenu7);
+        menuLogin.setText("Login");
+        menuLogin.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                menuLoginMouseClicked(evt);
+            }
+        });
+        jMenuBar1.add(menuLogin);
 
         setJMenuBar(jMenuBar1);
 
@@ -188,6 +199,15 @@ public class MainForm extends javax.swing.JFrame {
         fp.setLocationRelativeTo(null);
         fp.setVisible(true);
     }//GEN-LAST:event_jMenuItem5ActionPerformed
+
+    private void menuLoginMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_menuLoginMouseClicked
+        FormLogin fl = new FormLogin(this, true);
+        fl.setLocationRelativeTo(null);
+        fl.setVisible(true);
+        
+        pegawai = fl.getPegawai();
+        labelDisplayName.setText(pegawai.getNamaPegawai());
+    }//GEN-LAST:event_menuLoginMouseClicked
 
     /**
      * @param args the command line arguments
@@ -228,7 +248,6 @@ public class MainForm extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
@@ -236,7 +255,6 @@ public class MainForm extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu4;
     private javax.swing.JMenu jMenu5;
     private javax.swing.JMenu jMenu6;
-    private javax.swing.JMenu jMenu7;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem10;
@@ -249,5 +267,7 @@ public class MainForm extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem8;
     private javax.swing.JMenuItem jMenuItem9;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel labelDisplayName;
+    private javax.swing.JMenu menuLogin;
     // End of variables declaration//GEN-END:variables
 }

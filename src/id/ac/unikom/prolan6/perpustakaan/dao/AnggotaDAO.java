@@ -7,7 +7,6 @@ import java.util.ArrayList;
 public interface AnggotaDAO {
     
     ArrayList<Anggota> getAnggota();
-    
     ArrayList<Anggota> getAnggota(String nama);
     
 }
