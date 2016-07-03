@@ -3,8 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package id.ac.unikom.prolan6.perpustakaan;
+
+import id.ac.unikom.prolan6.perpustakaan.dao.BukuDAO;
+import id.ac.unikom.prolan6.perpustakaan.daoimpl.BukuDAOImpl;
+import id.ac.unikom.prolan6.perpustakaan.entity.Buku;
+import id.ac.unikom.prolan6.perpustakaan.tablemodel.BukuTM;
+import java.awt.image.DataBuffer;
+import java.util.ArrayList;
+import javax.swing.JPanel;
 
 /**
  *
@@ -15,10 +22,26 @@ public class FormBuku extends javax.swing.JFrame {
     /**
      * Creates new form FormCariBuku
      */
+    private Buku buku;
+    private ArrayList<Buku> arrayBuku;
+
+    public Buku getBuku() {
+        return buku;
+    }
+    
     public FormBuku() {
         initComponents();
     }
+    
+    private void getData(String nama) {
+        BukuDAO dao = new BukuDAOImpl();
+        arrayBuku = dao.getBuku(nama);
 
+        BukuTM tm = new BukuTM();
+        tm.setArrayBuku(arrayBuku);
+
+        tabelBuku.setModel(tm);
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -177,6 +200,13 @@ public class FormBuku extends javax.swing.JFrame {
 
     private void buttonCariBukuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonCariBukuActionPerformed
         // TODO add your handling code here:
+        //Get fieldBuku
+        String judulBuku = fieldBuku.getText();
+
+        //Validasi judulBuku
+   
+        //Pencarian
+        getData(judulBuku);
     }//GEN-LAST:event_buttonCariBukuActionPerformed
 
     private void tabelBukuMouseWheelMoved(java.awt.event.MouseWheelEvent evt) {//GEN-FIRST:event_tabelBukuMouseWheelMoved

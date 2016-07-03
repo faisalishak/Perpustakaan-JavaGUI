@@ -6,6 +6,13 @@
 
 package id.ac.unikom.prolan6.perpustakaan;
 
+import id.ac.unikom.prolan6.perpustakaan.dao.PegawaiDAO;
+import id.ac.unikom.prolan6.perpustakaan.daoimpl.BukuDAOImpl;
+import id.ac.unikom.prolan6.perpustakaan.daoimpl.PegawaiDAOImpl;
+import id.ac.unikom.prolan6.perpustakaan.entity.Pegawai;
+import id.ac.unikom.prolan6.perpustakaan.tablemodel.PegawaiTM;
+import java.util.ArrayList;
+
 /**
  *
  * @author ig4ever
@@ -15,10 +22,27 @@ public class FormPegawai extends javax.swing.JFrame {
     /**
      * Creates new form FormPegawai
      */
+    private Pegawai pegawai;
+    private ArrayList<Pegawai> arrayPegawai;
+
+    public Pegawai getPegawai() {
+        return pegawai;
+    }
+    
     public FormPegawai() {
         initComponents();
     }
 
+    private void getData(String nama) {
+        PegawaiDAO dao = new PegawaiDAOImpl();
+        arrayPegawai = dao.getPegawai(nama);
+
+        PegawaiTM tm = new PegawaiTM();
+        tm.setArrayPegawai(arrayPegawai);
+
+        tabelPegawai.setModel(tm);
+    }
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -170,6 +194,12 @@ public class FormPegawai extends javax.swing.JFrame {
 
     private void buttonCariPegawaiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonCariPegawaiActionPerformed
         // TODO add your handling code here:
+        String namaPegawai = fieldPegawai.getText();
+
+        //Validasi judulBuku
+   
+        //Pencarian
+        getData(namaPegawai);
     }//GEN-LAST:event_buttonCariPegawaiActionPerformed
 
     private void tabelPekerjaMouseWheelMoved(java.awt.event.MouseWheelEvent evt) {//GEN-FIRST:event_tabelPekerjaMouseWheelMoved
