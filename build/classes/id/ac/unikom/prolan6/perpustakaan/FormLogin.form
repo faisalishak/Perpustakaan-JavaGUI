@@ -31,17 +31,10 @@
                   <Component id="jLabel9" alignment="1" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <Component id="radioButtonAnggota1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
-                      <Component id="radioButtonPegawai1" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
-                      <Component id="textFieldUserName" alignment="0" max="32767" attributes="0"/>
-                      <Component id="passwordField" alignment="0" min="-2" pref="167" max="-2" attributes="0"/>
-                      <Component id="buttonLogin" alignment="1" min="-2" max="-2" attributes="0"/>
-                  </Group>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Component id="textFieldUserName" alignment="0" max="32767" attributes="0"/>
+                  <Component id="passwordField" alignment="0" min="-2" pref="167" max="-2" attributes="0"/>
+                  <Component id="buttonLogin" alignment="1" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace pref="124" max="32767" attributes="0"/>
           </Group>
@@ -61,12 +54,7 @@
                   <Component id="passwordField" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel9" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="radioButtonAnggota1" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="radioButtonPegawai1" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
               <Component id="buttonLogin" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="0" pref="29" max="32767" attributes="0"/>
           </Group>
@@ -145,11 +133,6 @@
         </Container>
       </SubComponents>
     </Container>
-    <Component class="javax.swing.JRadioButton" name="radioButtonPegawai1">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Pegawai"/>
-      </Properties>
-    </Component>
     <Component class="javax.swing.JTextField" name="textFieldUserName">
     </Component>
     <Component class="javax.swing.JPasswordField" name="passwordField">
@@ -171,11 +154,6 @@
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonLoginActionPerformed"/>
       </Events>
-    </Component>
-    <Component class="javax.swing.JRadioButton" name="radioButtonAnggota1">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Anggota"/>
-      </Properties>
     </Component>
   </SubComponents>
 </Form>
