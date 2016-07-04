@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -16,6 +17,17 @@ import javax.swing.table.AbstractTableModel;
 public class BukuTM extends AbstractTableModel {
 
     ArrayList<Buku> arrayBuku;
+=======
+package id.ac.unikom.prolan6.perpustakaan.tablemodel;
+
+import id.ac.unikom.prolan6.perpustakaan.enitiy.Buku;
+import java.util.ArrayList;
+import javax.swing.table.AbstractTableModel;
+
+public class BukuTM extends AbstractTableModel {
+
+    private ArrayList<Buku> arrayBuku;
+>>>>>>> b50703bdef715f3b696bc83679e545a8993aaa50
 
     public void setArrayBuku(ArrayList<Buku> arrayBuku) {
         this.arrayBuku = arrayBuku;
@@ -28,13 +40,18 @@ public class BukuTM extends AbstractTableModel {
 
     @Override
     public int getColumnCount() {
+<<<<<<< HEAD
         return 7;
+=======
+        return 3;
+>>>>>>> b50703bdef715f3b696bc83679e545a8993aaa50
     }
 
     @Override
     public Object getValueAt(int rowIndex, int columnIndex) {
         switch (columnIndex) {
             case 0:
+<<<<<<< HEAD
                 return arrayBuku.get(rowIndex).getKdBuku();
             case 1:
                 return arrayBuku.get(rowIndex).getJudulBuku();
@@ -47,11 +64,18 @@ public class BukuTM extends AbstractTableModel {
             case 5:
                 return arrayBuku.get(rowIndex).getStok();
             case 6:
+=======
+                return arrayBuku.get(rowIndex).getIdBuku();
+            case 1:
+                return arrayBuku.get(rowIndex).getJudul();
+            case 2:
+>>>>>>> b50703bdef715f3b696bc83679e545a8993aaa50
                 return arrayBuku.get(rowIndex).getHarga();
         }
         return null;
     }
 
+<<<<<<< HEAD
 //    @Override
 //    public String getColumnName(int column) {
 //        switch (column) {
@@ -72,5 +96,19 @@ public class BukuTM extends AbstractTableModel {
 //        }
 //        return null;
 //    }
+=======
+    @Override
+    public String getColumnName(int column) {
+        switch (column) {
+            case 0:
+                return "Id Buku";
+            case 1:
+                return "Judul";
+            case 2:
+                return "Harga";
+        }
+        return null;
+    }
+>>>>>>> b50703bdef715f3b696bc83679e545a8993aaa50
 
 }
