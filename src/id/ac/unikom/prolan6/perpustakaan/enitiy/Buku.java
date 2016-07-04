@@ -5,10 +5,7 @@
  */
 package id.ac.unikom.prolan6.perpustakaan.enitiy;
 
-/**
- *
- * @author Robi Tanzil
- */
+
 public class Buku {
 
     private String idBuku;
