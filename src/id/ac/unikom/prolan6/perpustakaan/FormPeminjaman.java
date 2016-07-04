@@ -7,7 +7,7 @@ package id.ac.unikom.prolan6.perpustakaan;
 
 import id.ac.unikom.prolan6.perpustakaan.dao.PeminjamanDAO;
 import id.ac.unikom.prolan6.perpustakaan.daoimpl.PeminjamanDAOImpl;
-import id.ac.unikom.prolan6.perpustakaan.enitiy.Peminjaman;
+import id.ac.unikom.prolan6.perpustakaan.entitiy.Peminjaman;
 import id.ac.unikom.prolan6.perpustakaan.tablemodel.PeminjamanTM;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;

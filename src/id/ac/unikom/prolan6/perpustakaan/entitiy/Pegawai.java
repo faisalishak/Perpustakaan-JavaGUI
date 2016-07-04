@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package id.ac.unikom.prolan6.perpustakaan.enitiy;
+package id.ac.unikom.prolan6.perpustakaan.entitiy;
 
 /**
  *
@@ -14,8 +14,8 @@ public class Pegawai {
     private String namaPegawai;
     private String alamat;
     private String noTelp;
-    public static String nama; 
-    public static boolean isLogin;
+    private String userName;
+    private String password;
 
     public Integer getIdPegawai() {
         return idPegawai;
@@ -39,6 +39,22 @@ public class Pegawai {
 
     public void setNamaPegawai(String namaPegawai) {
         this.namaPegawai = namaPegawai;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public String getPassword() {
+        return password;
     }
 
     public void setAlamat(String alamat) {

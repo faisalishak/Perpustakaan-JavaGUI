@@ -4,7 +4,7 @@ package id.ac.unikom.prolan6.perpustakaan.daoimpl;
 
 
 import id.ac.unikom.prolan6.perpustakaan.dao.AnggotaDAO;
-import id.ac.unikom.prolan6.perpustakaan.enitiy.Anggota;
+import id.ac.unikom.prolan6.perpustakaan.entitiy.Anggota;
 import id.ac.unikom.prolan6.perpustakaan.utility.DatabaseConnectivity;
 import java.sql.Connection;
 import java.sql.PreparedStatement;

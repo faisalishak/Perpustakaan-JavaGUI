@@ -9,8 +9,8 @@ package id.ac.unikom.prolan6.perpustakaan;
 
 import id.ac.unikom.prolan6.perpustakaan.dao.PeminjamanDetailDao;
 import id.ac.unikom.prolan6.perpustakaan.daoimpl.PeminjamanDetailDaoImpl;
-import id.ac.unikom.prolan6.perpustakaan.enitiy.Peminjaman;
-import id.ac.unikom.prolan6.perpustakaan.enitiy.PeminjamanDetail;
+import id.ac.unikom.prolan6.perpustakaan.entitiy.Peminjaman;
+import id.ac.unikom.prolan6.perpustakaan.entitiy.PeminjamanDetail;
 import id.ac.unikom.prolan6.perpustakaan.tablemodel.PeminjamanDetailTM;
 import java.util.ArrayList;
 

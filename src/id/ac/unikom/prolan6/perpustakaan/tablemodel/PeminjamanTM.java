@@ -6,7 +6,7 @@
 package id.ac.unikom.prolan6.perpustakaan.tablemodel;
 
 
-import id.ac.unikom.prolan6.perpustakaan.enitiy.Peminjaman;
+import id.ac.unikom.prolan6.perpustakaan.entitiy.Peminjaman;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;

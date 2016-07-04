@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package id.ac.unikom.prolan6.perpustakaan.enitiy;
+package id.ac.unikom.prolan6.perpustakaan.entitiy;
 
 
 public class Buku {

@@ -7,7 +7,7 @@ package id.ac.unikom.prolan6.perpustakaan;
 
 import id.ac.unikom.prolan6.perpustakaan.dao.AnggotaDAO;
 import id.ac.unikom.prolan6.perpustakaan.daoimpl.AnggotaDAOImpl;
-import id.ac.unikom.prolan6.perpustakaan.enitiy.Anggota;
+import id.ac.unikom.prolan6.perpustakaan.entitiy.Anggota;
 import id.ac.unikom.prolan6.perpustakaan.tablemodel.AnggotaTM;
 import java.util.ArrayList;
 

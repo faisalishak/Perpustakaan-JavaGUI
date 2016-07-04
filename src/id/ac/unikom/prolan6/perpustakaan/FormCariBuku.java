@@ -5,10 +5,7 @@
  */
 package id.ac.unikom.prolan6.perpustakaan;
 
-import id.ac.unikom.prolan6.perpustakaan.dao.BukuDAO;
-import id.ac.unikom.prolan6.perpustakaan.daoimpl.BukuDAOImpl;
-import id.ac.unikom.prolan6.perpustakaan.enitiy.Buku;
-import id.ac.unikom.prolan6.perpustakaan.tablemodel.BukuTM;
+import id.ac.unikom.prolan6.perpustakaan.entitiy.Buku;
 import java.util.ArrayList;
 
 public class FormCariBuku extends javax.swing.JDialog {
@@ -30,13 +27,7 @@ public class FormCariBuku extends javax.swing.JDialog {
     }
 
     private void getData(String nama) {
-        BukuDAO dao = new BukuDAOImpl();
-        arrayBuku = dao.getBuku(nama);
-
-        BukuTM tm = new BukuTM();
-        tm.setArrayBuku(arrayBuku);
-
-        tableBuku.setModel(tm);
+        
     }
 
     private void refreshData() {

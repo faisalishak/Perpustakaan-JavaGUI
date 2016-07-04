@@ -6,37 +6,21 @@
 package id.ac.unikom.prolan6.perpustakaan.daoimpl;
 
 import id.ac.unikom.prolan6.perpustakaan.dao.PegawaiDAO;
-<<<<<<< HEAD
-import id.ac.unikom.prolan6.perpustakaan.entity.Pegawai;
-=======
-import id.ac.unikom.prolan6.perpustakaan.enitiy.Pegawai;
->>>>>>> b50703bdef715f3b696bc83679e545a8993aaa50
+import id.ac.unikom.prolan6.perpustakaan.entitiy.Pegawai;
 import id.ac.unikom.prolan6.perpustakaan.utility.DatabaseConnectivity;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-<<<<<<< HEAD
 import java.util.ArrayList;
-=======
->>>>>>> b50703bdef715f3b696bc83679e545a8993aaa50
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-/**
- *
-<<<<<<< HEAD
- * @author ig4ever
-=======
- * @author faisal
->>>>>>> b50703bdef715f3b696bc83679e545a8993aaa50
- */
 public class PegawaiDAOImpl implements PegawaiDAO {
 
     private final Connection conn;
 
     public PegawaiDAOImpl() {
-<<<<<<< HEAD
         conn = DatabaseConnectivity.getConnection();
     }
 
@@ -74,7 +58,7 @@ public class PegawaiDAOImpl implements PegawaiDAO {
                     a.setNamaPegawai(result.getString(2));
                     a.setAlamat(result.getString(3));
                     a.setNoTelp(result.getString(4));
-                    a.setUsername(result.getString(5));
+                    a.setUserName(result.getString(5));
                     a.setPassword(result.getString(6));
 
                     arrayPegawai.add(a);
@@ -93,8 +77,7 @@ public class PegawaiDAOImpl implements PegawaiDAO {
             }
         }
         return arrayPegawai;
-=======
-        this.conn = DatabaseConnectivity.getConnection();
+        
     }
 
     @Override
@@ -115,10 +98,9 @@ public class PegawaiDAOImpl implements PegawaiDAO {
                 pegawai = new Pegawai();
                 pegawai.setIdPegawai(result.getInt(1));
                 pegawai.setNamaPegawai(result.getString(2));
-                pegawai.setAlamat(result.getString(2));
-                pegawai.setNoTelp(result.getString(2));
-                Pegawai.isLogin = true;
-                Pegawai.nama = result.getString(2);
+                pegawai.setAlamat(result.getString(3));
+                pegawai.setNoTelp(result.getString(4));
+
             }
 
         } catch (SQLException ex) {
@@ -127,7 +109,6 @@ public class PegawaiDAOImpl implements PegawaiDAO {
         
 
         return pegawai;
->>>>>>> b50703bdef715f3b696bc83679e545a8993aaa50
     }
 
 }

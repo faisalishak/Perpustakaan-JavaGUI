@@ -7,7 +7,7 @@ package id.ac.unikom.prolan6.perpustakaan;
 
 import id.ac.unikom.prolan6.perpustakaan.dao.PegawaiDAO;
 import id.ac.unikom.prolan6.perpustakaan.daoimpl.PegawaiDAOImpl;
-import id.ac.unikom.prolan6.perpustakaan.enitiy.Pegawai;
+import id.ac.unikom.prolan6.perpustakaan.entitiy.Pegawai;
 import javax.swing.JOptionPane;
 
 /**

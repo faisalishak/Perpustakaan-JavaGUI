@@ -1,7 +1,7 @@
 package id.ac.unikom.prolan6.perpustakaan.daoimpl;
 
 import id.ac.unikom.prolan6.perpustakaan.dao.PeminjamanDetailDao;
-import id.ac.unikom.prolan6.perpustakaan.enitiy.PeminjamanDetail;
+import id.ac.unikom.prolan6.perpustakaan.entitiy.PeminjamanDetail;
 import id.ac.unikom.prolan6.perpustakaan.utility.DatabaseConnectivity;
 import java.sql.Connection;
 import java.sql.PreparedStatement;

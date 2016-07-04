@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package id.ac.unikom.prolan6.perpustakaan.enitiy;
+package id.ac.unikom.prolan6.perpustakaan.entitiy;
 
 import java.util.Date;
 

@@ -2,7 +2,7 @@
 package id.ac.unikom.prolan6.perpustakaan.dao;
 
 
-import id.ac.unikom.prolan6.perpustakaan.enitiy.Peminjaman;
+import id.ac.unikom.prolan6.perpustakaan.entitiy.Peminjaman;
 import java.util.ArrayList;
 import java.util.Calendar;
 

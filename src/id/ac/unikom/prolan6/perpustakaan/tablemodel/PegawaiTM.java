@@ -6,7 +6,7 @@
 
 package id.ac.unikom.prolan6.perpustakaan.tablemodel;
 
-import id.ac.unikom.prolan6.perpustakaan.entity.Pegawai;
+import id.ac.unikom.prolan6.perpustakaan.entitiy.Pegawai;
 import java.util.ArrayList;
 import javax.swing.table.AbstractTableModel;
 
@@ -44,7 +44,7 @@ public class PegawaiTM extends AbstractTableModel{
             case 3:
                 return arrayPegawai.get(rowIndex).getNoTelp();
             case 4:
-                return arrayPegawai.get(rowIndex).getUsername();
+                return arrayPegawai.get(rowIndex).getUserName();
             case 5:
                 return arrayPegawai.get(rowIndex).getPassword();
         }
