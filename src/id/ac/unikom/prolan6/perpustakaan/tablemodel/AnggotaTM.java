@@ -37,9 +37,9 @@ public class AnggotaTM extends AbstractTableModel {
     public String getColumnName(int column) {
         switch (column) {
             case 0:
-                return "Id Anggota";
+                return "ID ANGGOTA";
             case 1:
-                return "Nama";
+                return "NAMA";
         }
         return null;
     }

@@ -89,7 +89,7 @@ public class PeminjamanDAOImpl implements PeminjamanDAO {
     public boolean pinjam(int idAnggota,  Calendar tglPinjam, Calendar tglKembali, int harga) {
         String INSERT = "INSERT INTO peminjaman "
                 + "(idAnggota, tglPinjam, tglKembali,harga) "
-                + "VALUES (?, ?, ?,?)";
+                + "VALUES (?, ?, ?, ?)";
         PreparedStatement state = null;
 
         try {

@@ -3,7 +3,6 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package id.ac.unikom.prolan6.perpustakaan.tablemodel;
 
 import id.ac.unikom.prolan6.perpustakaan.entitiy.Pegawai;
@@ -14,8 +13,8 @@ import javax.swing.table.AbstractTableModel;
  *
  * @author ig4ever
  */
-public class PegawaiTM extends AbstractTableModel{
-    
+public class PegawaiTM extends AbstractTableModel {
+
     ArrayList<Pegawai> arrayPegawai;
 
     public void setArrayPegawai(ArrayList<Pegawai> arrayPegawai) {
@@ -50,5 +49,24 @@ public class PegawaiTM extends AbstractTableModel{
         }
         return null;
     }
-    
+
+    @Override
+    public String getColumnName(int column) {
+        switch (column) {
+            case 0:
+                return "ID PEGAWAI";
+            case 1:
+                return "NAMA";
+            case 2:
+                return "ALAMAT";
+            case 3:
+                return "NO TELP";
+            case 4:
+                return "USERNAME";
+            case 5:
+                return "PASSWORD";
+        }
+        return null;
+    }
+
 }

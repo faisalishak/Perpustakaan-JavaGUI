@@ -4,9 +4,11 @@
  * and open the template in the editor.
  */
 package id.ac.unikom.prolan6.perpustakaan;
+
 import id.ac.unikom.prolan6.perpustakaan.dao.PegawaiDAO;
 import id.ac.unikom.prolan6.perpustakaan.daoimpl.PegawaiDAOImpl;
 import id.ac.unikom.prolan6.perpustakaan.entitiy.Pegawai;
+import javax.swing.JFrame;
 
 /**
  *
@@ -14,12 +16,13 @@ import id.ac.unikom.prolan6.perpustakaan.entitiy.Pegawai;
  */
 public class MainForm extends javax.swing.JFrame {
 
-    public MainForm(){
+    public MainForm() {
         initComponents();
     }
-    
+
     public MainForm(Pegawai pegawai) {
         initComponents();
+        setExtendedState(JFrame.MAXIMIZED_BOTH);  
         getData(pegawai);
     }
 
@@ -27,7 +30,7 @@ public class MainForm extends javax.swing.JFrame {
         PegawaiDAO dao = new PegawaiDAOImpl();
         labelDisplayName.setText(pegawai.getNamaPegawai());
     }
-    
+
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -47,11 +50,7 @@ public class MainForm extends javax.swing.JFrame {
         jMenu3 = new javax.swing.JMenu();
         jMenuItem5 = new javax.swing.JMenuItem();
         jMenuItem6 = new javax.swing.JMenuItem();
-        jMenu4 = new javax.swing.JMenu();
-        jMenuItem7 = new javax.swing.JMenuItem();
-        jMenuItem8 = new javax.swing.JMenuItem();
-        jMenuItem9 = new javax.swing.JMenuItem();
-        jMenuItem10 = new javax.swing.JMenuItem();
+        menuRekab = new javax.swing.JMenu();
         jMenu5 = new javax.swing.JMenu();
         menuLogout = new javax.swing.JMenu();
 
@@ -141,21 +140,13 @@ public class MainForm extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu3);
 
-        jMenu4.setText("Rekab");
-
-        jMenuItem7.setText("Buku");
-        jMenu4.add(jMenuItem7);
-
-        jMenuItem8.setText("Anggota");
-        jMenu4.add(jMenuItem8);
-
-        jMenuItem9.setText("Pegawai");
-        jMenu4.add(jMenuItem9);
-
-        jMenuItem10.setText("Transaksi");
-        jMenu4.add(jMenuItem10);
-
-        jMenuBar1.add(jMenu4);
+        menuRekab.setText("Rekab");
+        menuRekab.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                menuRekabMouseClicked(evt);
+            }
+        });
+        jMenuBar1.add(menuRekab);
 
         jMenu5.setText("Database");
         jMenuBar1.add(jMenu5);
@@ -198,6 +189,12 @@ public class MainForm extends javax.swing.JFrame {
         fl.setVisible(true);
         dispose();
     }//GEN-LAST:event_menuLogoutMouseClicked
+
+    private void menuRekabMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_menuRekabMouseClicked
+        FormRekab fr = new FormRekab(this, true);
+        fr.setLocationRelativeTo(null);
+        fr.setVisible(true);
+    }//GEN-LAST:event_menuRekabMouseClicked
 
     /**
      * @param args the command line arguments
@@ -242,24 +239,19 @@ public class MainForm extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
-    private javax.swing.JMenu jMenu4;
     private javax.swing.JMenu jMenu5;
     private javax.swing.JMenu jMenu6;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JMenuItem jMenuItem10;
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JMenuItem jMenuItem5;
     private javax.swing.JMenuItem jMenuItem6;
-    private javax.swing.JMenuItem jMenuItem7;
-    private javax.swing.JMenuItem jMenuItem8;
-    private javax.swing.JMenuItem jMenuItem9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel labelDisplayName;
     private javax.swing.JMenu menuLogout;
+    private javax.swing.JMenu menuRekab;
     // End of variables declaration//GEN-END:variables
 
-    
 }
