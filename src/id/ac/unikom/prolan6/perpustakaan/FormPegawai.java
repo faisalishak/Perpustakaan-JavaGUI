@@ -8,7 +8,7 @@ package id.ac.unikom.prolan6.perpustakaan;
 
 import id.ac.unikom.prolan6.perpustakaan.dao.PegawaiDAO;
 import id.ac.unikom.prolan6.perpustakaan.daoimpl.PegawaiDAOImpl;
-import id.ac.unikom.prolan6.perpustakaan.entity.Pegawai;
+import id.ac.unikom.prolan6.perpustakaan.entitiy.Pegawai;
 import id.ac.unikom.prolan6.perpustakaan.tablemodel.PegawaiTM;
 import java.util.ArrayList;
 
