@@ -3,33 +3,8 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-<<<<<<< HEAD
-            <file>file:/C:/Users/ig4ever/Documents/GitHub/TUBES_PROLAN/src/id/ac/unikom/prolan6/perpustakaan/entity/Buku.java</file>
-            <file>file:/C:/Users/ig4ever/Documents/GitHub/TUBES_PROLAN/src/id/ac/unikom/prolan6/perpustakaan/MainForm.java</file>
-            <file>file:/C:/Users/ig4ever/Documents/GitHub/TUBES_PROLAN/src/id/ac/unikom/prolan6/perpustakaan/entity/Pegawai.java</file>
-            <file>file:/C:/Users/ig4ever/Documents/GitHub/TUBES_PROLAN/src/id/ac/unikom/prolan6/perpustakaan/tablemodel/PegawaiTM.java</file>
-            <file>file:/C:/Users/ig4ever/Documents/GitHub/TUBES_PROLAN/src/id/ac/unikom/prolan6/perpustakaan/utility/DatabaseConnectivity.java</file>
-            <file>file:/C:/Users/ig4ever/Documents/GitHub/TUBES_PROLAN/src/id/ac/unikom/prolan6/perpustakaan/daoimpl/PegawaiDAOImpl.java</file>
-            <file>file:/C:/Users/ig4ever/Documents/GitHub/TUBES_PROLAN/src/id/ac/unikom/prolan6/perpustakaan/LoginForm.java</file>
-            <file>file:/C:/Users/ig4ever/Documents/GitHub/TUBES_PROLAN/src/id/ac/unikom/prolan6/perpustakaan/FormPegawai.java</file>
-            <file>file:/C:/Users/ig4ever/Documents/GitHub/TUBES_PROLAN/src/id/ac/unikom/prolan6/perpustakaan/dao/BukuDAO.java</file>
-            <file>file:/C:/Users/ig4ever/Documents/GitHub/TUBES_PROLAN/src/id/ac/unikom/prolan6/perpustakaan/dao/PegawaiDAO.java</file>
-            <file>file:/C:/Users/ig4ever/Documents/GitHub/TUBES_PROLAN/src/id/ac/unikom/prolan6/perpustakaan/tablemodel/BukuTM.java</file>
-            <file>file:/C:/Users/ig4ever/Documents/GitHub/TUBES_PROLAN/src/id/ac/unikom/prolan6/perpustakaan/daoimpl/BukuDAOImpl.java</file>
-            <file>file:/C:/Users/ig4ever/Documents/GitHub/TUBES_PROLAN/src/id/ac/unikom/prolan6/perpustakaan/FormBuku.java</file>
-=======
-            <file>file:/D:/Arsip%20kuliah/kampus/PROLAN/Tugas-Besar/Perpustakaan-JavaGUI/src/id/ac/unikom/prolan6/perpustakaan/FormTambahPeminjaman.java</file>
-            <file>file:/D:/Arsip%20kuliah/kampus/PROLAN/Tugas-Besar/Perpustakaan-JavaGUI/src/id/ac/unikom/prolan6/perpustakaan/dao/AnggotaDAO.java</file>
-            <file>file:/D:/Arsip%20kuliah/kampus/PROLAN/Tugas-Besar/Perpustakaan-JavaGUI/src/id/ac/unikom/prolan6/perpustakaan/daoimpl/PegawaiDAOImpl.java</file>
-            <file>file:/D:/Arsip%20kuliah/kampus/PROLAN/Tugas-Besar/Perpustakaan-JavaGUI/src/id/ac/unikom/prolan6/perpustakaan/FormPeminjaman.java</file>
-            <file>file:/D:/Arsip%20kuliah/kampus/PROLAN/Tugas-Besar/Perpustakaan-JavaGUI/src/id/ac/unikom/prolan6/perpustakaan/daoimpl/AnggotaDAOImpl.java</file>
-            <file>file:/D:/Arsip%20kuliah/kampus/PROLAN/Tugas-Besar/Perpustakaan-JavaGUI/src/id/ac/unikom/prolan6/perpustakaan/dao/PegawaiDAO.java</file>
-            <file>file:/D:/Arsip%20kuliah/kampus/PROLAN/Tugas-Besar/Perpustakaan-JavaGUI/src/id/ac/unikom/prolan6/perpustakaan/FormLogin.java</file>
-            <file>file:/D:/Arsip%20kuliah/kampus/PROLAN/Tugas-Besar/Perpustakaan-JavaGUI/src/id/ac/unikom/prolan6/perpustakaan/enitiy/Pegawai.java</file>
-            <file>file:/D:/Arsip%20kuliah/kampus/PROLAN/Tugas-Besar/Perpustakaan-JavaGUI/src/id/ac/unikom/prolan6/perpustakaan/FormPegawai.java</file>
-            <file>file:/D:/Arsip%20kuliah/kampus/PROLAN/Tugas-Besar/Perpustakaan-JavaGUI/src/id/ac/unikom/prolan6/perpustakaan/MainForm.java</file>
-            <file>file:/D:/Arsip%20kuliah/kampus/PROLAN/Tugas-Besar/Perpustakaan-JavaGUI/src/id/ac/unikom/prolan6/perpustakaan/FormCariBuku.java</file>
->>>>>>> b50703bdef715f3b696bc83679e545a8993aaa50
+            <file>file:/G:/Perpustakaan-JavaGUI/src/id/ac/unikom/prolan6/perpustakaan/utility/DatabaseConnectivity.java</file>
+            <file>file:/G:/Perpustakaan-JavaGUI/src/id/ac/unikom/prolan6/perpustakaan/enitiy/Buku.java</file>
         </group>
     </open-files>
 </project-private>
